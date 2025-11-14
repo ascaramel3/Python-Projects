@@ -1,0 +1,53 @@
+# Practice program for classes and dicts. All things considered this is kind of useless and
+# the way classes are used isn't great BUT if you were to make multiple dictionary objects this would be helpful.
+# This is prep for my next big project, a 2p fighting game.
+
+program_running = True
+
+class Dictionary:
+    def __init__(self):
+        self.entries = {
+        }
+    def addEntry(self):
+        word = input("Give a word: ")
+        definition = input("Give a definition: ")
+        self.entries[word] = definition
+    def delEntry(self):
+        delword = input("Give the word you would like to delete: ")
+        del self.entries[delword]
+    def printDict(self):
+        print("\n")
+        for key, value in self.entries.items():
+            print(key+":", value)
+            if self.entries == {
+            }:
+                print("No entries exist currently.")
+    def directory(self):
+        global program_running
+        while program_running == True:
+            query = input("""Would you like to add an entry, delete an entry, or print your entries so far?
+You may also quit the program if you like.
+(A to add, D to delete, P to print, C to quit program) """)
+            if query == "A" or query == "a":
+                self.addEntry()
+                print("\n")
+            elif query == "D" or query == "d":
+                self.delEntry()
+                print("\n")
+            elif query == "P" or query == "p":
+                self.printDict()
+                print("\n")
+            elif query == "C" or query == "c":
+                program_running = False
+                if program_running == False:
+                    quit()
+            else:
+                print("You have put in an invalid value.")
+
+print("~Personal Dictionary~\nMade by Aidan Singer\n")
+
+dictionary=Dictionary()
+dictionary.addEntry()
+dictionary.directory()
+
+# Finished 8-27-2025
