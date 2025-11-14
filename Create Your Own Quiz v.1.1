@@ -1,9 +1,13 @@
 questions=[]
 answers=[]
 
-print("-Create Your Own Quiz v.1.0-\nBy Aidan Singer\n")
+print("-Create Your Own Quiz v.1.1-\nBy Aidan Singer\n")
 
-question_number=input("How many questions do you want in the quiz? (At least 1.)")
+question_number=input("How many questions do you want in the quiz? (At least 1.) ")
+
+while question_number=="0":
+    print("At least 1.")
+    question_number=input("How many questions do you want in the quiz? (At least 1.) ")
 
 #Easter egg/message
 while question_number=="pneumonoultramicroscopicsilicovolcanoconiosis":
@@ -13,8 +17,8 @@ if question_number=="m3ssag3":
     
 def question_and_answers():
     for i in range(int(question_number)):
-        question_query=input("Input a question:")
-        answers_query=input("Now input an answer to this question:")
+        question_query=input("Input a question: ")
+        answers_query=input("Now input an answer to this question: ")
         questions.append(question_query)
         answers.append(answers_query)
 question_and_answers()
