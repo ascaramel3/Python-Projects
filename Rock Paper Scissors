@@ -1,0 +1,29 @@
+
+import random
+import time
+
+print("~Rock Paper Scissors~")
+
+player_choice=input("Choose rock, paper or scissors")
+
+while player_choice != "rock" and player_choice != "paper" and player_choice != "scissors":
+    print("Please choose a valid answer.")
+    player_choice=input("Choose rock, paper or scissors:")
+
+print("The computer is choosing...")
+time.sleep(1)
+print("Rock...")
+time.sleep(1)
+print("Paper")
+time.sleep(1)
+print("Scissors!")
+time.sleep(1)
+
+show_pc_choice=random.randint(1,3)
+
+if show_pc_choice==1:
+    print("Rock")
+elif show_pc_choice==2:
+    print("Paper")
+else:
+    print("Scissors")
