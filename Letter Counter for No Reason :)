@@ -1,0 +1,5 @@
+print("~Letter Counter for No Reason :)~\nMade by Aidan Singer")
+
+query=input("What's the word?")
+
+print(len(query),"letters")
