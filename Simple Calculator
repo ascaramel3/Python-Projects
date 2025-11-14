@@ -1,0 +1,33 @@
+print("~Simple Calculator~\nMade by Aidan Singer")
+
+calcmode=input("Addition, Subtraction, Multiplication, Division? (A, S, M, or D)")
+
+if calcmode=="A":
+    addend1=input("Enter an addend:")
+    addend2=input("Enter a second addend:")
+    addprob=float(addend1)+float(addend2)
+    print("Your result is:",addprob)
+elif calcmode=="S":
+    minuend=input("Enter a minuend (subtracting from):")
+    subtrahend=input("Enter a subtrahend (subtracting by):")
+    subprob=float(minuend)-float(subtrahend)
+    print("Your result is:",subprob)
+elif calcmode=="M":
+    mulmode=input("Exponential or Normal? (E or N)")
+    if mulmode=="E":
+        base=input("Enter a base:")
+        exponent=input("Enter an exponent:")
+        exequation=float(base)**float(exponent)
+        print("Your result is:",exequation)
+    elif mulmode=="N":
+        factor1=input("Enter a factor:")
+        factor2=input("Enter another factor:")
+        mulprob=float(factor1)*float(factor2)
+        print("Your result is:",mulprob)
+elif calcmode=="D":
+    dividend=input("Enter a dividend (number being divided):")
+    divisor=input("Enter a divisor (dividing by):")
+    divprob=float(dividend)/float(divisor)
+    print("Your result is:",divprob)
+
+# Finished 2-18-2025.	
